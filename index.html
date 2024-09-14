@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شرکت بازرگانی تینامیر تجارت رایا | صادرات ، واردات </title>
+  <link rel="icon" href="./tmrImages/simple-logo-02.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="file1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"></script>
+
+<script>
+
+  $(document).ready(function () {
+    const numFa = new Intl.NumberFormat('fa-IR', {style : "decimal" }).format(909122066229).replace(/٬/g , "")
+    $("#num").html(numFa)
+})
+
+</script>
+</head>
+
+<body>
+  <div id="counselingModal">
+    <form action="">
+      <div id="counselingDialog">
+        <div class="modalTitleBox">
+          <i class="fa-solid fa-xmark FontAwesome-debug close-icon" onclick="hideCounselingModal()"></i>
+          <p>فرم مشاوره با کارشناس</p>
+        </div>
+        <div class="modalFormItem">
+          <input type="text" placeholder="نام و نام خانوادگی">
+        </div>
+        <div class="modalFormItem">
+          <input type="text" placeholder="شماره تماس">
+        </div>
+        <div class="modalFormItem">
+          <input type="text" placeholder="ایمیل">
+        </div>
+        <div class="modalFormItem">
+          <textarea name="textArea" id="textArea" cols="50" rows="5" placeholder="توضیحات"></textarea>
+        </div>
+        <div class="modalButtons">
+          <button href="#" class="cancel" onclick="hideCounselingModal()">انصراف</button>
+          <button class="send">ارسال پیغام</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+  <!-- <div id="prog"></div>
+<div>
+  <a id="btn-go-to-up" href=""></a>
+</div> -->
+  <header id="main-header">
+    <div class="header">
+      <i class="fas fa-bars FontAwesome-debug bars-icon"></i>
+      <i class="fa fa-search FontAwesome-debug search-icon" aria-hidden="true" onclick="showSearchBox()"></i>
+      <input type="text" id="textBox" onblur="hideTextBox()" placeholder="جستجو...">
+      <i class="fa fa-search FontAwesome-debug" id="searchIconInBox" aria-hidden="true"></i>
+
+      <i class="fa-regular fa-envelope FontAwesome-debug envelope-icon"></i>
+      <p class="email">t.heidari@tinamir.com</p>
+    </div>
+    <div class="header2">
+      <div class="header2-box">
+        <div class="header2-searchBox">
+          <input type="text" id="navTextBox" onblur="hideTextBox()" placeholder="جستجو...">
+          <i class="fa fa-search FontAwesome-debug" id="navSearchIconInBox" aria-hidden="true"></i>
+        </div>
+        <ul class="header-nav-items">
+          <li class="nav-item" id="activeItem">
+            <a href="" class="active-link">صفحه اصلی</a>
+          </li>
+          <li class="nav-item" id="navItem">
+            <a href="" class="nav-link"> وبلاگ/مقالات</a>
+          </li>
+          <li class="nav-item" id="navItem" onclick="navItemSelector()">
+            <a href="" class="nav-link">اخبار</a>
+          </li>
+          <li class="nav-item" id="navItem" onclick="navItemSelector()">
+            <a href="" class="nav-link"> سوالات متداول</a>
+          </li>
+        </ul>
+      </div>
+      <a href="enPage.html" class="navLanguageBotton">
+        <p class="language">English</p>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/383px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+          class="flag" alt="flag">
+      </a>
+    </div>
+  </header>
+  <nav id="main-nav">
+    <img src="./tmrImages/simple-logo-02.png" alt="logo" class="logo">
+    <div class="logo-name-box">
+      <p class="logo-name-1">شرکت بازرگانی</p>
+      <p class="logo-name-2">تینامیر تجارت رایا</p>
+    </div>
+    <div class="nav-box">
+      <ul class="nav-items">
+        <li class="nav-item" id="activeItem">
+          <a href="" class="active-link">صفحه اصلی</a>
+        </li>
+        <li class="nav-item" id="navItem">
+          <a href="" class="nav-link"> وبلاگ/مقالات</a>
+        </li>
+        <li class="nav-item" id="navItem" onclick="navItemSelector()">
+          <a href="" class="nav-link">اخبار</a>
+        </li>
+        <li class="nav-item" id="navItem" onclick="navItemSelector()">
+          <a href="" class="nav-link"> سوالات متداول</a>
+        </li>
+      </ul>
+      <a href="enPage.html" class="languageBotton">
+        <p class="language">English</p>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/383px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+          class="flag" alt="flag">
+      </a>
+    </div>
+  </nav>
+  <section>
+    <div class="cover"></div>
+    <div class="below-picture-container">
+      <img src="./tmrImages/Qomrok.jpg" alt="qomrok-image" id="qomrokImage">
+    </div>
+    <div class="about-us-container">
+      <div class="img-box">
+        <h1 style="margin: 168px 96px;">photo</h1>
+      </div>
+      <div class="about-us-box">
+        <h5 class="aboutUsTitle">شرکت تینامیر تجارت رایا :</h5>
+        <p class="aboutUsDescription-1">
+          شرکت تینامیر تجارت رایا، با هدف ایجاد پل ارتباطی بازرگانی و ارائه خدمات فنی مهندسی بین کشورهای خاورمیانه و
+          اروپایی، در زمینه‌های صنایع خودرو، نفت، گاز، پتروشیمی، ماشین‌آلات پکیجینگ، صنعت فلزات، مواد غذایی، انرژی‌های
+          نوین و اتوماسیون‌های صنعتی فعالیت می‌کند. فعالیت خود را از سال ۲۰۲۲ آغاز نموده‌ایم و استراتژی ما انتقال
+          تکنولوژی
+          با محوریت کشورهای صاحب صنعت می‌باشد.
+        </p>
+        <p class="aboutUsDescription-2">تینامیر تجارت رایا با بهره‌مندی از متخصصین داخلی و خارجی و با ارتباطات گسترده با
+          دفاترمان در آلمان و عمان،
+          آماده ارائه خدمات فنی و مهندسی، مشاوره فنی طرح‌های توسعه، انتقال تکنولوژی و تأمین قطعات یدکی اورجینال از سراسر
+          کشورهای اروپایی است.
+        </p>
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./tmrImages/59.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./tmrImages/hdd18.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./tmrImages/Untitled-147.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+      </button>
+    </div>
+    <div class="wrapper">
+      <p class="advantages-us-title">ارزش های ما :</p>
+      <div class="Obligations-container">
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-1">کیفیت</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ تعهد به ارائه خدمات و محصولات با بالاترین استانداردهای کیفیت.</p>
+            <p class="obligation-description-2">_ تضمین کیفیت در تمامی مراحل پروژه، از مشاوره تا اجرای نهایی.</p>
+          </div>
+        </div>
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-1">نوآوری</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ بهره‌گیری از تکنولوژی‌های پیشرفته و نوآورانه در تمامی خدمات.</p>
+            <p class="obligation-description-2">_ تشویق به خلاقیت و نوآوری در حل مسائل و ارائه راهکارهای جدید.</p>
+          </div>
+        </div>
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-2">تعهد و مسئولیت پذیری</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ تعهد به رعایت اصول اخلاقی و حرفه‌ای در تمامی تعاملات.</p>
+            <p class="obligation-description-2">_ پذیرش مسئولیت و پاسخگویی در قبال نتایج و عملکرد خود.</p>
+          </div>
+        </div>
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-3"> رضایت مشتری</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ تمرکز بر نیازها و انتظارات مشتریان و تلاش برای فراتر رفتن از آن‌ها.</p>
+            <p class="obligation-description-2">_ ایجاد ارتباطات موثر و شفاف با مشتریان و فراهم آوردن تجربه‌ای بی‌نظیر برای آن‌ها.</p>
+          </div>
+        </div>
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-2">پایداری و مسئولیت اجتماعی</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ تعهد به حفاظت از محیط زیست و اجرای پروژه‌ها با رعایت اصول پایداری.</p>
+            <p class="obligation-description-2">_ مشارکت در برنامه‌ها و فعالیت‌های مسئولیت اجتماعی و کمک به بهبود جامعه.</p>
+          </div>
+        </div>
+        <div class="Obligations-box">
+          <div class="rotating"></div>
+          <div class="obligation-title-around">
+            <p class="obligation-title-3">همکاری و تیم‌سازی</p>
+          </div>
+          <div class="Advantages">
+            <p class="obligation-description">_ ایجاد یک محیط کاری مثبت و حمایتگر برای کارکنان و شرکای تجاری.</p>
+            <p class="obligation-description-2">_ ترویج فرهنگ همکاری و تیم‌سازی برای دستیابی به اهداف مشترک.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="goalsOfCompany">
+      <p class="titleOfGoals"> ماموریت ما :</p>
+      <p class="descOfGoals">شرکت تینامیر تجارت رایا با هدف ایجاد پلی مطمئن و پایدار بین صنایع خاورمیانه و اروپا تاسیس
+        شده است. ماموریت ما ارائه خدمات فنی و مهندسی، انتقال تکنولوژی‌های نوین، و تسهیل فرآیندهای بازرگانی با تمرکز بر
+        کیفیت، نوآوری و رضایت مشتریان است. ما متعهدیم که با بهره‌گیری از دانش و تخصص نیروهای مجرب داخلی و بین‌المللی،
+        نیازهای صنعتی مشتریان را به بهترین شکل ممکن برآورده کنیم و در توسعه و بهبود صنایع مختلف نقش موثری ایفا نماییم.
+      </p>
+    </div>
+    <div class="goalsOfCompany">
+      <p class="titleOfGoals">چشم انداز ما :</p>
+      <p class="descOfGoals">شرکت تینامیر تجارت رایا به دنبال آن است که به عنوان یکی از پیشروترین و معتبرترین شرکت‌های
+        فنی و مهندسی و
+        بازرگانی در منطقه خاورمیانه و اروپا شناخته شود. ما می‌خواهیم با ایجاد ارزش‌های پایدار و ارائه خدمات برتر، به
+        توسعه و بهبود صنایع مختلف کمک کنیم و نقش کلیدی در انتقال تکنولوژی‌های پیشرفته به صنایع داخلی ایفا نماییم.
+      </p>
+    </div>
+    <div class="companyActivitiesBox">
+      <p class="companyActivitiesTitle">فعالیت های شرکت</p>
+    </div>
+    <div class="owlCarouselContainer">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <h4>photo1</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">اجرای پروژه‌های ریکامیشنینگ</p>
+            <p class="activityDescription activityDescription-1">ما در تینامیر تجارت رایا با تجربه و تخصص در اجرای پروژه‌های ریکامیشنینگ، از
+              مرحله مشاوره تا راه‌اندازی کامل صنایع مختلف را پوشش می‌دهیم. هدف ما بهبود و بازسازی خطوط تولید به منظور
+              افزایش کارایی و بهره‌وری است. تیم‌های مجرب ما با بهره‌گیری از تکنولوژی‌های پیشرفته و رعایت استانداردهای
+              بین‌المللی، پروژه‌های ریکامیشنینگ را با دقت و کارایی بالا انجام می‌دهند.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>photo2</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">ارتباط موثر با تأمین‌کنندگان و تولیدکنندگان اروپایی</p>
+            <p class="activityDescription activityDescription-2">ما با شرکت‌های معتبر اروپایی همکاری داریم تا بتوانیم بهترین محصولات و خدمات
+              را به مشتریان خود ارائه دهیم. شرکت مستقل و فعال ما در آلمان نقش کلیدی در این ارتباطات دارد و به ما کمک
+              می‌کند تا با تأمین‌کنندگان و تولیدکنندگان برتر اروپا به صورت مستقیم و بدون واسطه همکاری کنیم. این ارتباطات
+              موثر، تضمین‌کننده کیفیت بالای محصولات و خدمات ماست.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>photo3</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">برنامه‌ریزی پروژه‌ها</p>
+            <p class="activityDescription activityDescription-3">ما در تینامیر تجارت رایا به برنامه‌ریزی دقیق و منظم پروژه‌ها اهمیت می‌دهیم.
+              با استفاده از سیستم‌های مدیریت کیفیت و مدیریت ریسک، پروژه‌ها را به گونه‌ای برنامه‌ریزی می‌کنیم که تمامی
+              الزامات استانداردهای جهانی را رعایت کند. این رویکرد به ما کمک می‌کند تا پروژه‌ها را با بالاترین سطح کیفیت
+              و در زمان مقرر به اتمام برسانیم.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>photo4</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">مشاوره خرید خطوط تولید استوک و نو</p>
+            <p class="activityDescription activityDescription-4">ما با درک عمیق از نیازهای صنایع مختلف، خدمات مشاوره خرید خطوط تولید استوک و
+              نو را ارائه می‌دهیم. با تحلیل دقیق نیازهای مشتریان و ارائه بهترین راهکارها، به آن‌ها کمک می‌کنیم تا خطوط
+              تولید مناسب را برای توسعه کسب‌وکار خود انتخاب کنند. همچنین، ما در فرآیندهای خرید و تأمین این خطوط تولید
+              همراه مشتریان هستیم.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>5</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">ایجاد روش‌های موثر ارتباطی</p>
+            <p class="activityDescription activityDescription-5">یکی از مهمترین فعالیت‌های ما ایجاد روش‌های موثر ارتباطی با شرکت‌های معتبر
+              اروپایی است. این ارتباطات به ما کمک می‌کند تا بتوانیم به طور مستمر از جدیدترین تکنولوژی‌ها و دانش فنی
+              بهره‌مند شویم و آن‌ها را به مشتریان خود انتقال دهیم. با این روش، ما توانسته‌ایم بسیاری از گلوگاه‌های موجود
+              در فرآیندهای تولید را رفع کنیم و آموزش‌های اثربخشی را به صنایع مختلف ارائه دهیم.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>6</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">همکاری در انجام تشریفات گمرکی و ترخیص تجهیزات</p>
+            <p class="activityDescription activityDescription-6">ما با ارائه خدمات مشاوره و همکاری در انجام تشریفات گمرکی و ترخیص تجهیزات و
+              خطوط تولید، فرآیند واردات و صادرات را برای مشتریان خود ساده‌تر می‌کنیم. همچنین، ما در حمل و نقل تجهیزات
+              خاص به مشتریان خود مشاوره می‌دهیم تا این تجهیزات به موقع و بدون مشکل به مقصد برسند.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h4>7</h4>
+          <img src="" alt="" class="owlCarouselImages">
+          <div class="activityBox">
+            <p class="activityTitle">برنامه‌ریزی اورهال تجهیزات خاص</p>
+            <p class="activityDescription activityDescription-7">تیم متخصص ما در تینامیر تجارت رایا با بهره‌گیری از تکنولوژی‌های پیشرفته،
+              برنامه‌ریزی و اجرای اورهال تجهیزات خاص ساخت کشورهای اروپایی را به عهده دارد. هدف ما از این فعالیت، بهبود
+              کارایی و افزایش عمر مفید تجهیزات است. با استفاده از دانش فنی به‌روز و رعایت استانداردهای بین‌المللی،
+              اورهال تجهیزات را به بهترین شکل ممکن انجام می‌دهیم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ExecutiveRecordsBox">
+      <div class="ExecutiveRecordsBoxHeaderBox">
+        <p class="ExecutiveRecordsTitle">سوابق اجرایی</p>
+      </div>
+      <div class="Executive-records-1">
+        <p class="Executive-records-fa">دیسمنتلینگ و انتقال خط اکستروژن و پرس ۲۵۰۰ تن:</p><br>
+        <p class="Executive-records-description-2">
+          ما با موفقیت پروژه دیسمنتلینگ خط اکستروژن و پرس ۲۵۰۰ تن را از کشور جمهوری چک به ایران به پایان رساندیم. این
+          پروژه شامل جداسازی، بسته‌بندی و انتقال تجهیزات پیچیده صنعتی با دقت بالا بود و به طور کامل بر اساس الزامات و
+          استانداردهای بین‌المللی اجرا شد.
+        </p>
+      </div>
+      <div class="Executive-records-2">
+        <p class="Executive-records-fa">راه‌اندازی خط اتوماتیک تولید ماسک:</p><br>
+        <p class="Executive-records-description-2">
+          در پاسخ به نیاز فوری به تجهیزات بهداشتی در دوران بحران کرونا، ما خط اتوماتیک تولید ماسک با ظرفیت تولید یک
+          میلیون ماسک در هفته را در کشور آلمان راه‌اندازی کردیم. این پروژه شامل نصب و راه‌اندازی تجهیزات پیشرفته و تنظیم
+          فرآیند تولید با هدف تضمین کیفیت و کارایی بالا بود.
+        </p>
+      </div>
+      <div class="Executive-records-1">
+        <p class="Executive-records-fa">مشاوره فنی در راه‌اندازی مجدد خط بازیافت شیشه:</p><br>
+        <p class="Executive-records-description-2">
+          ما با ارائه مشاوره تخصصی در کشور مجارستان، موفق به بهبود و راه‌اندازی مجدد خط بازیافت شیشه شدیم. این پروژه
+          شامل تجزیه و تحلیل فرآیندهای موجود، پیشنهاد راهکارهای بهینه و نظارت بر اجرای تغییرات به منظور افزایش بهره‌وری
+          و کاهش هدررفت مواد بود.
+        </p>
+      </div>
+      <div class="Executive-records-2">
+        <p class="Executive-records-fa"> راه‌اندازی خط تولید کمک‌فنر خودرو با تکنولوژی مگنتو رئولوجیکال:</p>
+        <br>
+        <p class="Executive-records-description-2">
+          در این پروژه، ما خط تولید پیشرفته کمک‌فنر خودرو با تکنولوژی مگنتو رئولوجیکال را نصب و راه‌اندازی کردیم. این
+          تکنولوژی مدرن بهبود چشمگیری در عملکرد کمک‌فنرها و بهینه‌سازی کیفیت نهایی محصولات را به ارمغان آورد.
+        </p>
+      </div>
+      <div class="Executive-records-1">
+        <p class="Executive-records-fa">انتقال دانش فنی تعمیرات مدرن جرثقیل‌های سنگین:</p><br>
+        <p class="Executive-records-description-2">
+          انتقال دانش فنی در تعمیرات مدرن جرثقیل‌های ۱۶۰ تن و ۲۲۰ تن از کشور آلمان به ایران یکی از پروژه‌های برجسته ما
+          بود. این پروژه شامل آموزش تکنسین‌ها، ارائه راهکارهای تعمیر و نگهداری پیشرفته و تضمین قابلیت‌های عملیاتی
+          جرثقیل‌ها بود.
+        </p>
+      </div>
+      <div class="Executive-records-2">
+        <p class="Executive-records-fa">مشاوره و راه‌اندازی شبکه‌های خدمات پس از فروش خودرو:</p><br>
+        <p class="Executive-records-description-2">با استفاده از آخرین استانداردهای شرکت‌های معتبر خودروسازی آلمان، ما
+          به راه‌اندازی شبکه‌های مدرن خدمات پس از فروش خودرو و شبکه‌های تعمیرگاهی پرداختیم. این پروژه شامل طراحی و
+          پیاده‌سازی فرآیندهای خدماتی به‌روز و بهبود کیفیت خدمات پس از فروش بود.
+        </p>
+      </div>
+      <div class="Executive-records-1">
+        <p class="Executive-records-fa">تأمین دستگاه‌های دیاگ خودرویی و صنعتی:</p><br>
+        <p class="Executive-records-description-2">
+          ما با تأمین دستگاه‌های دیاگ پیشرفته برای تشخیص و تعمیر مشکلات فنی در خودروهای سواری و صنعتی، نقش مهمی در
+          ارتقاء کیفیت خدمات تعمیر و نگهداری ایفا کردیم. این دستگاه‌ها با دقت بالا و قابلیت‌های گسترده، ابزارهای کلیدی
+          برای تعمیرکاران حرفه‌ای فراهم می‌آورند. </p>
+      </div>
+    </div>
+    <!-- <div class="container-fluid">
+  <span accesskey="1" class="customDotsCarousel active"></span>
+  <span accesskey="2" class="customDotsCarousel"></span>
+  <span accesskey="3" class="customDotsCarousel"></span>
+  <span accesskey="4" class="customDotsCarousel"></span>
+  <span accesskey="5" class="customDotsCarousel"></span>
+  <span accesskey="6" class="customDotsCarousel"></span>
+  <span accesskey="7" class="customDotsCarousel"></span>
+</div> -->
+    <div class="counseling" id="counseling" onclick="showModal()">
+      <img src="./tmrImages/Headphone.png" class="headPhoneImg" alt="">
+    </div>
+    <div id="triangle"></div>
+    <span class="counseling-spn">
+      <p>مشاوره آنلاین</p>
+    </span>
+    <div class="goToUp">
+      <i class="fa fa-chevron-up FontAwesome-debug chevron-icon" aria-hidden="true"></i>
+    </div>
+
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="firstBox">
+        <div class="firstBox-title">
+          <p>درباره ما</p>
+        </div>
+        <div class="explaination">
+          <p>شرکت تینامیر تجارت رایا، با هدف ایجاد پل ارتباطی بازرگانی و ارائه خدمات فنی مهندسی بین کشورهای خاورمیانه و
+            اروپایی، در زمینه‌های صنایع خودرو، نفت، گاز، پتروشیمی، ماشین‌آلات پکیجینگ، صنعت فلزات، مواد غذایی، انرژی‌های
+            نوین و اتوماسیون‌های صنعتی فعالیت می‌کند. فعالیت خود را از سال ۲۰۲۲ آغاز نموده‌ایم و استراتژی ما انتقال
+            تکنولوژی با محوریت کشورهای صاحب صنعت می‌باشد.</p>
+        </div>
+      </div>
+      <div class="secondBox">
+        <div class="secondBox-title">
+          <p>مدیریت</p>
+        </div>
+        <div class="managing">
+          <div>
+            <p class="manager">Leyla Heidari</p>
+            <p class="position-title">CEO & Member of the Board</p>
+          </div>
+          <img src="./tmrImages/TR_logo.png" class="footer-logo" alt="">
+        </div>
+      </div>
+      <div class="thirdBox">
+        <div class="thirdBox-title">
+          <p>ارتباط با ما</p>
+        </div>
+        <div class="icons">
+          <i class="fa fa-phone FontAwesome-debug footer-phone-icon" aria-hidden="true"></i>
+          <i class="fa-regular fa-envelope FontAwesome-debug footer-envelope-icon"></i>
+          <img src="./tmrImages/8044.jpg" alt="">
+        </div>
+        <div class="relationship">
+          <div>
+            <p id="num">.</p>
+          </div>
+          <div>
+            <p>t.heidari@tinamir.com</p>
+          </div>
+          <div>
+            <p>www.tinamir.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      rtl: true,
+      loop: true,
+      margin: 10,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 100000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        900: {
+          items: 4
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
